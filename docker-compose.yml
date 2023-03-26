@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  bookstoreImage:
+  bookstoreimage:
     build: .
     # always restart the container if it stops or fails
     restart: always
@@ -13,13 +13,12 @@ services:
     # environment is optional for this section
     environment:
       MYSQL_DATABASE_HOST: db
-      MYSQL_DATABASE_USER: clarusway
+      MYSQL_DATABASE_USER: clarusway 
       MYSQL_DATABASE_PASSWORD: Clarusway_1
       MYSQL_DATABASE_DB: bookstore_db
       MYSQL_DATABASE_PORT: 3306
     networks:
       - bookstoreNet
-
 
   redis:
     image: redis:latest
@@ -28,7 +27,7 @@ services:
 
 
   db:
-    image: mysql
+    image: mysql:5.7
     # always restart the container if it stops or fails
     restart: always
     environment:
