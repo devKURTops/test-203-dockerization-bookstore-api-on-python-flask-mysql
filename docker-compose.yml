@@ -12,6 +12,7 @@ services:
       - "80:80"
     # environment is optional for this section
     environment:
+      MYSQL_ROOT_PASSWORD: a1234
       MYSQL_DATABASE_HOST: db
       MYSQL_DATABASE_USER: clarusway 
       MYSQL_DATABASE_PASSWORD: Clarusway_1
@@ -32,7 +33,7 @@ services:
     # always restart the container if it stops or fails
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: a1234
       MYSQL_USER: clarusway
       MYSQL_PASSWORD: Clarusway_1
       MYSQL_DATABASE: bookstore_db
@@ -43,4 +44,3 @@ networks:
   bookstoreNet:
     # driver: bridge
 
-# to-be-continued 
